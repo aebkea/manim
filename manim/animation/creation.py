@@ -296,7 +296,7 @@ class Unwrite(Write):
     ----------
     reverse : :class:`bool`
         Set True to have the animation start erasing from the last submobject first.
-    
+
     Examples
     --------
 
@@ -309,7 +309,7 @@ class Unwrite(Write):
                 self.wait()
                 self.play(Unwrite(text))
                 self.wait()
-    
+
     .. manim :: UnwriteReverseTrue
 
         class UnwriteReverseTrue(Scene):
@@ -319,7 +319,7 @@ class Unwrite(Write):
                 self.wait()
                 self.play(Unwrite(text,reverse=True))
                 self.wait()
-                
+
     """
 
     def __init__(
