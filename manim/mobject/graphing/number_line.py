@@ -217,7 +217,13 @@ class NumberLine(Line):
         self.center()
 
         if self.include_tip:
-            self.add_tip(tip_length=self.tip_height, tip_width=self.tip_width)
+            self.add_tip(
+                tip_length=self.tip_height, tip_width=self.tip_width, at_start=True
+            )
+            self.add_tip(
+                tip_length=self.tip_height, tip_width=self.tip_width, at_start=False
+            )
+            self.start_tip.set_stroke(self.stroke_color, self.stroke_width)
             self.tip.set_stroke(self.stroke_color, self.stroke_width)
 
         if self.include_ticks:
